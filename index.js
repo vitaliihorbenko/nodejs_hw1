@@ -13,15 +13,15 @@ const argv = require("yargs").argv;
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      listContacts().then((data) => console.log(data));
+      listContacts().then((data) => console.table(data));
       break;
 
     case "get":
-      getContactById(String(id)).then((data) => console.log(data));
+      getContactById(String(id)).then((data) => console.table(data));
       break;
 
     case "add":
-      addContact(name, email, phone).then((data) => console.log(data));
+      addContact(name, email, phone).then((data) => console.table(data));
       break;
 
     case "remove":

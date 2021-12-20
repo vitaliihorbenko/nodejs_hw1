@@ -27,9 +27,13 @@ async function getContactById(contactId) {
 async function removeContact(contactId) {
   try {
     const data = await listContacts();
-    const result = data.filter(({ id }) => id !== contactId);
-    await fs.writeFile(contactsPath, JSON.stringify(result));
-    return "Contact removed";
+    const element = await getContactById(contactId);
+    const idx = data.findIndex((el) => el.id === contactId);
+    if (idx !== -1) {
+      data.splice(idx, 1);
+    }
+    await fs.writeFile(contactsPath, JSON.stringify(data));
+    return element;
   } catch (err) {
     console.error(err);
   }
@@ -52,7 +56,7 @@ async function addContact(name, email, phone) {
 
     const contacts = JSON.stringify(data);
     fs.writeFile(contactsPath, contacts);
-    return `Contact added`;
+    return newContact;
   } catch (err) {
     console.error(err);
   }
