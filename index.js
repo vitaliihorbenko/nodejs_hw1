@@ -25,7 +25,7 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "remove":
-      removeContact(String(id)).then((data) => console.log(data));
+      removeContact(String(id)).then((data) => console.table(data));
       break;
 
     default:

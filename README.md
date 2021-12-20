@@ -8,3 +8,6 @@ https://prnt.sc/23pxa80
 
 node index.js --action add --name Mangoos --email mango@gmail.com --phone 322-22-22
 https://prnt.sc/23pxn4p
+
+node index.js --action remove --id 14
+https://prnt.sc/23q1cgy
