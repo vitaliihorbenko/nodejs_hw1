@@ -1,0 +1,27 @@
+{
+  "name": "nodejs_hw1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliihorbenko/nodejs_hw1.git"
+  },
+  "author": "Vitalii Horbenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitaliihorbenko/nodejs_hw1/issues"
+  },
+  "homepage": "https://github.com/vitaliihorbenko/nodejs_hw1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "yargs": "^17.3.0"
+  }
+}
